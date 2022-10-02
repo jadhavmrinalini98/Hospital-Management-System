@@ -445,8 +445,8 @@ JOptionPane.showMessageDialog(this, "Please select a row to view.");
  txtTeamInfo.setText(selectedEmployee.getTeamInfo());
  txtCellphone.setText(selectedEmployee.getCellphone());
  txtEmailAdd.setText(selectedEmployee.getEmailAddress());
- populateTable();
- displayImage();
+ //populateTable();
+ //displayImage();
 // Image picture1 = e.getImage().getScaledInstance(174, 133, Image.SCALE_SMOOTH);
 //        
 // BufferedImage resizedImage1 = new BufferedImage(174, 133,BufferedImage.TYPE_INT_ARGB);
@@ -477,17 +477,17 @@ String tblTeamInfo = tblDisplay.getValueAt(tblDisplay.getSelectedRow(), 6).toStr
 String tblPositionTitle = tblDisplay.getValueAt(tblDisplay.getSelectedRow(), 7).toString();
 String tblCellphone = tblDisplay.getValueAt(tblDisplay.getSelectedRow(), 8).toString();
 String tblEmailAddress = tblDisplay.getValueAt(tblDisplay.getSelectedRow(), 9).toString();
-
-txtName.setText(tblName);
-txtEmpID.setText(tblEmployeeID);
-txtAge.setText(tblAge);
-txtGender.setText(tblGender);
-txtSdate.setText(tblStartDate);
-txtLevel.setText(tblLevel);
-txtTeamInfo.setText(tblTeamInfo);
-txtPosTitle.setText(tblPositionTitle);
-txtCellphone.setText(tblCellphone);
-txtEmailAdd.setText(tblEmailAddress);
+//
+//txtName.setText(tblName);
+//txtEmptxtName.setTextID.setText(tblEmployeeID);
+//txtAge.setText(tblAge);
+//txtGender.setText(tblGender);
+//txtSdate.setText(tblStartDate);
+//txtLevel.setText(tblLevel);
+//txtTeamInfo.setText(tblTeamInfo);
+//txtPosTitle.setText(tblPositionTitle);
+//txtCellphone.setText(tblCellphone);
+//txtEmailAdd.setText(tblEmailAddress);
 
 
         
@@ -506,7 +506,9 @@ txtEmailAdd.setText(tblEmailAddress);
     }//GEN-LAST:event_tblDisplayMouseClicked
 
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
-DefaultTableModel model = (DefaultTableModel) tblDisplay.getModel();
+
+        
+        DefaultTableModel model = (DefaultTableModel) tblDisplay.getModel();
 
         if (tblDisplay.getSelectedRowCount() == 1) {
             String Name = txtName.getText();
