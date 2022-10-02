@@ -35,30 +35,32 @@
                           <Component id="lblCellphone" min="-2" max="-2" attributes="0"/>
                           <Component id="lblEmailAdd" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <EmptySpace min="40" pref="40" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txtAge" alignment="0" min="-2" pref="284" max="-2" attributes="0"/>
-                                  <Component id="txtLevel" min="-2" pref="284" max="-2" attributes="0"/>
-                                  <Component id="txtTeamInfo" min="-2" pref="284" max="-2" attributes="0"/>
-                                  <Component id="txtPosTitle" alignment="0" min="-2" pref="284" max="-2" attributes="0"/>
-                                  <Component id="txtCellphone" alignment="0" min="-2" pref="284" max="-2" attributes="0"/>
-                                  <Component id="txtEmailAdd" alignment="0" min="-2" pref="284" max="-2" attributes="0"/>
-                                  <Component id="txtGender" alignment="0" min="-2" pref="284" max="-2" attributes="0"/>
-                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="txtName" max="32767" attributes="0"/>
-                                      <Component id="txtEmpID" pref="284" max="32767" attributes="0"/>
-                                      <Component id="txtSdate" alignment="0" max="32767" attributes="0"/>
-                                  </Group>
-                              </Group>
+                          <Component id="txtAge" alignment="0" min="-2" pref="284" max="-2" attributes="0"/>
+                          <Component id="txtLevel" min="-2" pref="284" max="-2" attributes="0"/>
+                          <Component id="txtTeamInfo" min="-2" pref="284" max="-2" attributes="0"/>
+                          <Component id="txtPosTitle" alignment="0" min="-2" pref="284" max="-2" attributes="0"/>
+                          <Component id="txtGender" alignment="0" min="-2" pref="284" max="-2" attributes="0"/>
+                          <Component id="btnUploadPhoto" alignment="0" min="-2" pref="224" max="-2" attributes="0"/>
+                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="txtName" max="32767" attributes="0"/>
+                              <Component id="txtEmpID" pref="284" max="32767" attributes="0"/>
+                              <Component id="txtSdate" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="btnUploadPhoto" min="-2" pref="224" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="txtCellphone" alignment="0" min="-2" pref="284" max="-2" attributes="0"/>
+                                  <Component id="txtEmailAdd" alignment="0" min="-2" pref="284" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="elab" min="-2" pref="217" max="-2" attributes="0"/>
+                                  <Component id="clab" min="-2" pref="217" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
-                      <EmptySpace min="0" pref="581" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -67,6 +69,13 @@
               <EmptySpace min="-2" pref="425" max="-2" attributes="0"/>
               <Component id="btnSave" min="-2" pref="198" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
+          </Group>
+          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace pref="456" max="32767" attributes="0"/>
+                  <Component id="nlab" min="-2" pref="217" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="348" max="-2" attributes="0"/>
+              </Group>
           </Group>
       </Group>
     </DimensionLayout>
@@ -123,13 +132,15 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="txtCellphone" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="lblCellphone" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="clab" alignment="3" max="32767" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="txtEmailAdd" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="lblEmailAdd" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="elab" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="26" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblPhoto" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnUploadPhoto" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -137,6 +148,13 @@
               <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
               <Component id="btnSave" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="154" max="-2" attributes="0"/>
+          </Group>
+          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
+                  <Component id="nlab" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="687" max="-2" attributes="0"/>
+              </Group>
           </Group>
       </Group>
     </DimensionLayout>
@@ -244,6 +262,7 @@
     <Component class="javax.swing.JTextField" name="txtEmailAdd">
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEmailAddActionPerformed"/>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtEmailAddKeyReleased"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnUploadPhoto">
@@ -273,6 +292,36 @@
       <Events>
         <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtGenderKeyPressed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="clab">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Helvetica Neue" size="13" style="3"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="0" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="nlab">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Helvetica Neue" size="13" style="3"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="0" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="elab">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Helvetica Neue" size="13" style="3"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="0" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
