@@ -23,10 +23,7 @@ import model.EmployeeDetails;
 import model.EmployeeHistory;
 
 
-/**
- *
- * @author bhawnabassarmalani
- */
+
 public class CreateJPanel extends javax.swing.JPanel {
     
     
