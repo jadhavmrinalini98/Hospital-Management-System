@@ -62,7 +62,7 @@ public class EmployeeHistory {
                 if(employee.getEmployeeId()!=null)
                 {
                     searchEmployee.add(employee);
-                    System.out.println("hiii");
+                   
                 }
             }
         }
@@ -74,6 +74,21 @@ public class EmployeeHistory {
         for(EmployeeDetails employee: details)
         {
             if(employee.getPositionTitle().equals(title))
+            {
+                if(employee.getName()!=null)
+                {
+                    searchEmployee.add(employee);
+                }
+            }
+        }
+        return searchEmployee;
+    }  
+    public ArrayList<EmployeeDetails> searchEmployeeGender(String gender)
+    {
+        ArrayList<EmployeeDetails> searchEmployee = new ArrayList();
+        for(EmployeeDetails employee: details)
+        {
+            if(employee.getGender().equals(gender))
             {
                 if(employee.getName()!=null)
                 {

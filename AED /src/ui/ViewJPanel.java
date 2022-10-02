@@ -207,8 +207,18 @@ public class ViewJPanel extends javax.swing.JPanel {
         });
 
         btnSearchByPosTitle.setText("Search by Pos. Title");
+        btnSearchByPosTitle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearchByPosTitleActionPerformed(evt);
+            }
+        });
 
         btnSearchByGender.setText("Gender");
+        btnSearchByGender.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearchByGenderActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -567,6 +577,16 @@ DefaultTableModel model = (DefaultTableModel) tblDisplay.getModel();
         searchByEmployeeID(txtSearchByEmpId.getText());
     }//GEN-LAST:event_btnSearchByEmpIDActionPerformed
 
+    private void btnSearchByPosTitleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchByPosTitleActionPerformed
+        // TODO add your handling code here:
+        searchByEmployeePosition(txtSearchByPositionTitle.getText());
+    }//GEN-LAST:event_btnSearchByPosTitleActionPerformed
+
+    private void btnSearchByGenderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchByGenderActionPerformed
+        // TODO add your handling code here:
+         searchByEmployeeGender(txtSearchByGender.getText());
+    }//GEN-LAST:event_btnSearchByGenderActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDelete;
@@ -691,12 +711,58 @@ DefaultTableModel model = (DefaultTableModel) tblDisplay.getModel();
            row[9] = dir.getEmailAddress();
             
            model.addRow(row);
-           System.out.println("hello");
+           
     
     
     
     }
 }
+
+    private void searchByEmployeePosition(String title) {
+        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        DefaultTableModel model = (DefaultTableModel)tblDisplay.getModel();
+        model.setRowCount(0);
+        for(EmployeeDetails dir : details.searchEmployeePostion(title)){
+           Object[] row = new Object[10];
+           row[0] = dir;
+           row[1] = dir.getEmployeeId();
+           row[2] = dir.getAge();
+           row[3] = dir.getGender();
+           row[4] = dir.getStartDate();
+           row[5] = dir.getLevel();
+           row[6] = dir.getTeamInfo();
+           row[7] = dir.getPositionTitle();
+           row[8] = dir.getCellphone();
+           row[9] = dir.getEmailAddress();
+            
+           model.addRow(row);
+    
+    }
+}
+
+    private void searchByEmployeeGender(String gender) {
+        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+     DefaultTableModel model = (DefaultTableModel)tblDisplay.getModel();
+        model.setRowCount(0);
+        for(EmployeeDetails dir : details.searchEmployeeGender(gender)){
+           Object[] row = new Object[10];
+           row[0] = dir;
+           row[1] = dir.getEmployeeId();
+           row[2] = dir.getAge();
+           row[3] = dir.getGender();
+           row[4] = dir.getStartDate();
+           row[5] = dir.getLevel();
+           row[6] = dir.getTeamInfo();
+           row[7] = dir.getPositionTitle();
+           row[8] = dir.getCellphone();
+           row[9] = dir.getEmailAddress();
+            
+           model.addRow(row);
+    
+    
+    }
+    }
+    
 }
     
 
