@@ -52,6 +52,37 @@ public class EmployeeHistory {
         }
         return searchEmployee;
     }  
+    public ArrayList<EmployeeDetails> searchEmployeeID(String id)
+    {
+        ArrayList<EmployeeDetails> searchEmployee = new ArrayList();
+        for(EmployeeDetails employee: details)
+        {
+            if(employee.getEmployeeId().equals(id))
+            {
+                if(employee.getEmployeeId()!=null)
+                {
+                    searchEmployee.add(employee);
+                    System.out.println("hiii");
+                }
+            }
+        }
+        return searchEmployee;
+    }  
+    public ArrayList<EmployeeDetails> searchEmployeePostion(String title)
+    {
+        ArrayList<EmployeeDetails> searchEmployee = new ArrayList();
+        for(EmployeeDetails employee: details)
+        {
+            if(employee.getPositionTitle().equals(title))
+            {
+                if(employee.getName()!=null)
+                {
+                    searchEmployee.add(employee);
+                }
+            }
+        }
+        return searchEmployee;
+    }  
     
     
 }
