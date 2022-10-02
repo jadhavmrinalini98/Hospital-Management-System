@@ -7,10 +7,12 @@ package ui;
 import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
 import model.EmployeeDetails;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.JOptionPane;
@@ -446,7 +448,7 @@ JOptionPane.showMessageDialog(this, "Please select a row to view.");
  txtCellphone.setText(selectedEmployee.getCellphone());
  txtEmailAdd.setText(selectedEmployee.getEmailAddress());
  //populateTable();
- //displayImage();
+ displayImage();
 // Image picture1 = e.getImage().getScaledInstance(174, 133, Image.SCALE_SMOOTH);
 //        
 // BufferedImage resizedImage1 = new BufferedImage(174, 133,BufferedImage.TYPE_INT_ARGB);
@@ -683,16 +685,27 @@ String tblEmailAddress = tblDisplay.getValueAt(tblDisplay.getSelectedRow(), 9).t
         }
     }
     public void displayImage(){
-        EmployeeDetails emp = new EmployeeDetails();
-        Image picture1 = emp.getImage().getScaledInstance(174, 133, Image.SCALE_SMOOTH);
-        
-        BufferedImage resizedImage1 = new BufferedImage(174, 133,BufferedImage.TYPE_INT_ARGB);
-        Graphics2D g2d1 = resizedImage1.createGraphics();
-        g2d1.drawImage(picture1,0,0,null);
-    
-        g2d1.dispose();
-        ImageIcon icon1 = new ImageIcon(resizedImage1);
-        displayImg.setIcon(icon1);
+//        EmployeeDetails emp = new EmployeeDetails();
+//        Image picture1 = emp.getImage().getScaledInstance(174, 133, Image.SCALE_SMOOTH);
+//        
+//        BufferedImage resizedImage1 = new BufferedImage(174, 133,BufferedImage.TYPE_INT_ARGB);
+//        Graphics2D g2d1 = resizedImage1.createGraphics();
+//        g2d1.drawImage(picture1,0,0,null);
+//    
+//        g2d1.dispose();
+//        ImageIcon icon1 = new ImageIcon(resizedImage1);
+//        displayImg.setIcon(icon1);
+           //JFileChooser browse = new JFileChooser();
+       // FileNameExtensionFilter extensionFilter = new FileNameExtensionFilter("Only jpg and jpeg Supported","jpeg","jpg");
+        //browse.setFileFilter(extensionFilter);
+        //browse.showOpenDialog(null);
+        //File f = browse.getSelectedFile();
+        String filename ="/Users/mrinalinijadhav/Desktop/image.png";
+        //plab.setText(filename);
+        Image getAbsolutePath =null;
+        ImageIcon icon = new ImageIcon(filename);
+        Image image = icon.getImage().getScaledInstance(displayImg.getWidth(),displayImg.getHeight(),Image.SCALE_SMOOTH);
+        displayImg.setIcon(icon);
     }
 
     public void searchByEmployeeID(String id) {
