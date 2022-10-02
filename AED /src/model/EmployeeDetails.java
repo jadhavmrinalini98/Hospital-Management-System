@@ -4,6 +4,7 @@
  */
 package model;
 
+import java.awt.image.BufferedImage;
 import java.util.Date;
 
 /**
@@ -23,6 +24,7 @@ public class EmployeeDetails {
     private String ContactInfo;
     private String Cellphone;
     private String EmailAddress;
+    private BufferedImage image;
     
 
     public String getCellphone() {
@@ -113,6 +115,17 @@ public class EmployeeDetails {
     public void setContactInfo(String ContactInfo) {
         this.ContactInfo = ContactInfo;
     }
+
+    public BufferedImage getImage() {
+        return image;
+    }
+
+    public void setImage(BufferedImage image) {
+        this.image = image;
+    }
+    
+
+   
     
     @Override  
         public String toString(){

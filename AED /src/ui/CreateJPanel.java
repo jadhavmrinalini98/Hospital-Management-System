@@ -8,11 +8,17 @@ import java.util.regex.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import static java.awt.event.KeyEvent.VK_NUMPAD9;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import javax.imageio.ImageIO;
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import model.EmployeeDetails;
 import model.EmployeeHistory;
 
@@ -28,8 +34,8 @@ public class CreateJPanel extends javax.swing.JPanel {
     /**
      * Creates new form CreateJPanel
      */
-    
-     EmployeeHistory details;
+    private BufferedImage image;
+    EmployeeHistory details;
     public CreateJPanel(EmployeeHistory details) {
         initComponents();
         
@@ -88,6 +94,7 @@ public class CreateJPanel extends javax.swing.JPanel {
         clab = new javax.swing.JLabel();
         nlab = new javax.swing.JLabel();
         elab = new javax.swing.JLabel();
+        plab = new javax.swing.JLabel();
 
         lblTitle.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         lblTitle.setForeground(new java.awt.Color(153, 0, 153));
@@ -144,6 +151,11 @@ public class CreateJPanel extends javax.swing.JPanel {
                 txtCellphoneActionPerformed(evt);
             }
         });
+        txtCellphone.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtCellphoneKeyReleased(evt);
+            }
+        });
 
         txtEmailAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -157,6 +169,11 @@ public class CreateJPanel extends javax.swing.JPanel {
         });
 
         btnUploadPhoto.setText("Upload Photo");
+        btnUploadPhoto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUploadPhotoActionPerformed(evt);
+            }
+        });
 
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
@@ -187,6 +204,8 @@ public class CreateJPanel extends javax.swing.JPanel {
         elab.setFont(new java.awt.Font("Helvetica Neue", 3, 13)); // NOI18N
         elab.setForeground(new java.awt.Color(255, 0, 51));
 
+        plab.setText("Image:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -216,11 +235,17 @@ public class CreateJPanel extends javax.swing.JPanel {
                             .addComponent(txtTeamInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtPosTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtGender, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnUploadPhoto, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtName)
-                                .addComponent(txtEmpID, javax.swing.GroupLayout.DEFAULT_SIZE, 284, Short.MAX_VALUE)
-                                .addComponent(txtSdate))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnUploadPhoto, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(118, 118, 118)
+                                .addComponent(plab, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtName)
+                                    .addComponent(txtEmpID, javax.swing.GroupLayout.DEFAULT_SIZE, 284, Short.MAX_VALUE)
+                                    .addComponent(txtSdate))
+                                .addGap(18, 18, 18)
+                                .addComponent(nlab, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(txtCellphone, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -235,11 +260,6 @@ public class CreateJPanel extends javax.swing.JPanel {
                 .addGap(425, 425, 425)
                 .addComponent(btnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(456, Short.MAX_VALUE)
-                    .addComponent(nlab, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(348, 348, 348)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -247,9 +267,11 @@ public class CreateJPanel extends javax.swing.JPanel {
                 .addGap(16, 16, 16)
                 .addComponent(lblTitle)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblName)
-                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblName)
+                        .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nlab, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtEmpID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -294,15 +316,11 @@ public class CreateJPanel extends javax.swing.JPanel {
                 .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPhoto)
-                    .addComponent(btnUploadPhoto))
+                    .addComponent(btnUploadPhoto)
+                    .addComponent(plab))
                 .addGap(54, 54, 54)
                 .addComponent(btnSave)
                 .addGap(154, 154, 154))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(73, 73, 73)
-                    .addComponent(nlab, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGap(687, 687, 687)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -439,6 +457,42 @@ public class CreateJPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_txtEmailAddKeyReleased
 
+    private void txtCellphoneKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCellphoneKeyReleased
+        // TODO add your handling code here:
+        String PATTERN="\\d{10}|(?:\\\\d{3}-){2}\\\\d{4}|\\\\(\\\\d{3}\\\\)\\\\d{3}-?\\\\d{4}";
+        Pattern patt= Pattern.compile(PATTERN);
+        Matcher match=patt.matcher(txtCellphone.getText());
+        if(!match.matches()){
+            clab.setText("Enter correct Cellphone Number");
+        }
+        else{
+            clab.setText(null);
+        }
+       
+    }//GEN-LAST:event_txtCellphoneKeyReleased
+
+    private void btnUploadPhotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUploadPhotoActionPerformed
+        // TODO add your handling code here:
+        EmployeeDetails e= new EmployeeDetails();
+        JFileChooser browse = new JFileChooser();
+        FileNameExtensionFilter extensionFilter = new FileNameExtensionFilter("Only jpg and jpeg Supported","jpeg","jpg");
+        browse.setFileFilter(extensionFilter);
+        browse.showOpenDialog(null);
+        File f = browse.getSelectedFile();
+        String filename = f.getName();
+        plab.setText(filename);
+        image = new BufferedImage(100,100,BufferedImage.TYPE_INT_ARGB);
+        
+        try {
+            image = ImageIO.read(f);
+        } catch (IOException ex) {
+            
+            JOptionPane.showMessageDialog(this,"Profile Not created");
+     //       Logger.getLogger(CreateJPanel.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        e.setImage(image);
+    }//GEN-LAST:event_btnUploadPhotoActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSave;
@@ -459,6 +513,7 @@ public class CreateJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblTeamInfo;
     private javax.swing.JLabel lblTitle;
     private javax.swing.JLabel nlab;
+    private javax.swing.JLabel plab;
     private javax.swing.JTextField txtAge;
     private javax.swing.JTextField txtCellphone;
     private javax.swing.JTextField txtEmailAdd;
