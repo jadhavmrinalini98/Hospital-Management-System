@@ -24,7 +24,7 @@ public class EmployeeDetails {
     private String ContactInfo;
     private String Cellphone;
     private String EmailAddress;
-    private BufferedImage image;
+    private String image;
     
 
     public String getCellphone() {
@@ -116,13 +116,15 @@ public class EmployeeDetails {
         this.ContactInfo = ContactInfo;
     }
 
-    public BufferedImage getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(BufferedImage image) {
+    public void setImage(String image) {
         this.image = image;
     }
+
+    
     
 
    

@@ -377,6 +377,7 @@ public class CreateJPanel extends javax.swing.JPanel {
         emp.setPositionTitle(posTitle);
         emp.setCellphone(mobile);
         emp.setEmailAddress(email);
+        emp.setImage(txtPath.getText());
         
 //        emp.setPhoto
 

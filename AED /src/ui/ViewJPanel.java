@@ -30,6 +30,7 @@ public class ViewJPanel extends javax.swing.JPanel {
      * Creates new form ViewJPanel
      */
     EmployeeHistory details;
+    EmployeeDetails emp;
     ArrayList<EmployeeDetails> tableContents;
     public ViewJPanel(EmployeeHistory details) {
         initComponents();
@@ -685,7 +686,7 @@ String tblEmailAddress = tblDisplay.getValueAt(tblDisplay.getSelectedRow(), 9).t
         }
     }
     public void displayImage(){
-//        EmployeeDetails emp = new EmployeeDetails();
+       //EmployeeDetails emp = new EmployeeDetails();
 //        Image picture1 = emp.getImage().getScaledInstance(174, 133, Image.SCALE_SMOOTH);
 //        
 //        BufferedImage resizedImage1 = new BufferedImage(174, 133,BufferedImage.TYPE_INT_ARGB);
@@ -700,7 +701,7 @@ String tblEmailAddress = tblDisplay.getValueAt(tblDisplay.getSelectedRow(), 9).t
         //browse.setFileFilter(extensionFilter);
         //browse.showOpenDialog(null);
         //File f = browse.getSelectedFile();
-        String filename ="/Users/mrinalinijadhav/Desktop/image.png";
+        String filename ="/Users/mrinalinijadhav/Documents/web dev resources/eiffel-tower (1).jpg"; 
         //plab.setText(filename);
         Image getAbsolutePath =null;
         ImageIcon icon = new ImageIcon(filename);
