@@ -99,32 +99,45 @@ public class CreateJPanel extends javax.swing.JPanel {
         txtPath = new javax.swing.JTextField();
 
         lblTitle.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
-        lblTitle.setForeground(new java.awt.Color(153, 0, 153));
+        lblTitle.setForeground(new java.awt.Color(102, 0, 51));
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitle.setText("Create Employee Records");
 
+        lblName.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
         lblName.setText("Name:");
 
+        lblEmpID.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
         lblEmpID.setText("Employee ID:");
 
+        lblAge.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
         lblAge.setText("Age:");
 
+        lblGender.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
         lblGender.setText("Gender:");
 
+        lblSdate.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
         lblSdate.setText("Start Date:");
 
+        lblLevel.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
         lblLevel.setText("Level:");
 
+        lblContactInfo.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        lblContactInfo.setForeground(new java.awt.Color(153, 0, 51));
         lblContactInfo.setText("Contact Info:");
 
-        lblPosTitle.setText("Posn. Title:");
+        lblPosTitle.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        lblPosTitle.setText("Position Title:");
 
+        lblTeamInfo.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
         lblTeamInfo.setText("Team Info:");
 
+        lblCellphone.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
         lblCellphone.setText("Cellphone:");
 
+        lblEmailAdd.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
         lblEmailAdd.setText("Email Address:");
 
+        lblPhoto.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
         lblPhoto.setText("Photo:");
 
         txtName.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -170,6 +183,7 @@ public class CreateJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnUploadPhoto.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
         btnUploadPhoto.setText("Upload Photo");
         btnUploadPhoto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -177,6 +191,7 @@ public class CreateJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnSave.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -206,6 +221,8 @@ public class CreateJPanel extends javax.swing.JPanel {
         elab.setFont(new java.awt.Font("Helvetica Neue", 3, 13)); // NOI18N
         elab.setForeground(new java.awt.Color(255, 0, 51));
 
+        plab.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        plab.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         plab.setText("Image:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -266,7 +283,7 @@ public class CreateJPanel extends javax.swing.JPanel {
                                         .addComponent(plab, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(txtPath, javax.swing.GroupLayout.PREFERRED_SIZE, 414, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 634, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 613, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -279,7 +296,7 @@ public class CreateJPanel extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(nlab, javax.swing.GroupLayout.DEFAULT_SIZE, 53, Short.MAX_VALUE)
+                                .addComponent(nlab, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGap(30, 30, 30)
                                 .addComponent(lblAge)
                                 .addGap(18, 18, 18))
@@ -323,12 +340,13 @@ public class CreateJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtCellphone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblCellphone)
-                    .addComponent(clab, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
+                    .addComponent(clab, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtEmailAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblEmailAdd)
-                    .addComponent(elab, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtEmailAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(4, 4, 4)
+                .addComponent(elab, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPhoto)

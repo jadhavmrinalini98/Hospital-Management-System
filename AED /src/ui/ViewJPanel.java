@@ -91,16 +91,23 @@ public class ViewJPanel extends javax.swing.JPanel {
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitle.setText("Create Employee Records");
 
+        lblContactInfo.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
         lblContactInfo.setText("Contact Info:");
 
+        lblPosTitle.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
         lblPosTitle.setText("Posn. Title:");
 
+        lblTeamInfo.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
         lblTeamInfo.setText("Team Info:");
 
+        lblCellphone.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        lblCellphone.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblCellphone.setText("Cellphone:");
 
+        lblEmailAdd.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
         lblEmailAdd.setText("Email Address:");
 
+        lblPhoto.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
         lblPhoto.setText("Photo:");
 
         txtName.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -112,6 +119,7 @@ public class ViewJPanel extends javax.swing.JPanel {
         lblTitle1.setFont(new java.awt.Font("Helvetica Neue", 1, 12)); // NOI18N
         lblTitle1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
+        lblName.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
         lblName.setText("Name:");
 
         txtCellphone.addActionListener(new java.awt.event.ActionListener() {
@@ -120,6 +128,7 @@ public class ViewJPanel extends javax.swing.JPanel {
             }
         });
 
+        lblEmpID.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
         lblEmpID.setText("Employee ID:");
 
         txtEmailAdd.addActionListener(new java.awt.event.ActionListener() {
@@ -128,12 +137,16 @@ public class ViewJPanel extends javax.swing.JPanel {
             }
         });
 
+        lblAge.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
         lblAge.setText("Age:");
 
+        lblGender.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
         lblGender.setText("Gender:");
 
+        lblSdate.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
         lblSdate.setText("Start Date:");
 
+        lblLevel.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
         lblLevel.setText("Level:");
 
         tblDisplay.setModel(new javax.swing.table.DefaultTableModel(
@@ -162,6 +175,7 @@ public class ViewJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblDisplay);
 
+        btnView.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
         btnView.setText("VIEW");
         btnView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -169,6 +183,7 @@ public class ViewJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnDelete.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
         btnDelete.setText("DELETE");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -176,6 +191,7 @@ public class ViewJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnUpdate.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
         btnUpdate.setText("UPDATE");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -258,32 +274,30 @@ public class ViewJPanel extends javax.swing.JPanel {
                                     .addComponent(btnSearchByGender, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(534, 534, 534)
-                        .addComponent(lblPhoto)
-                        .addGap(50, 50, 50)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(534, 534, 534)
+                                .addComponent(lblPhoto)
+                                .addGap(50, 50, 50))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblCellphone, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(lblEmailAdd, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addGap(520, 520, 520)))
                         .addComponent(displayImg, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblSdate)
-                            .addComponent(lblGender)
-                            .addComponent(lblAge)
-                            .addComponent(lblEmpID)
-                            .addComponent(lblName)
-                            .addComponent(lblLevel)
-                            .addComponent(lblTeamInfo)
-                            .addComponent(lblPosTitle)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(6, 6, 6)
-                                    .addComponent(lblCellphone))
-                                .addComponent(lblContactInfo))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(lblEmailAdd)))
+                .addGap(25, 25, 25)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblSdate)
+                    .addComponent(lblGender)
+                    .addComponent(lblAge)
+                    .addComponent(lblEmpID)
+                    .addComponent(lblName)
+                    .addComponent(lblLevel)
+                    .addComponent(lblTeamInfo)
+                    .addComponent(lblPosTitle)
+                    .addComponent(lblContactInfo))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -304,7 +318,7 @@ public class ViewJPanel extends javax.swing.JPanel {
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(txtGender)
                                 .addComponent(txtAge, javax.swing.GroupLayout.DEFAULT_SIZE, 284, Short.MAX_VALUE)))
-                        .addContainerGap(1555, Short.MAX_VALUE))))
+                        .addContainerGap(1551, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
                 .addGap(232, 232, 232)
                 .addComponent(btnView)
@@ -369,9 +383,9 @@ public class ViewJPanel extends javax.swing.JPanel {
                         .addGap(21, 21, 21)
                         .addComponent(lblContactInfo)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblCellphone)
-                            .addComponent(txtCellphone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtCellphone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblCellphone))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblEmailAdd)
@@ -701,7 +715,7 @@ String tblEmailAddress = tblDisplay.getValueAt(tblDisplay.getSelectedRow(), 9).t
         //browse.setFileFilter(extensionFilter);
         //browse.showOpenDialog(null);
         //File f = browse.getSelectedFile();
-        String filename ="/Users/mrinalinijadhav/Documents/web dev resources/eiffel-tower (1).jpg"; 
+        String filename ="/Users/mrinalinijadhav/Desktop/avatar.png"; 
         //plab.setText(filename);
         Image getAbsolutePath =null;
         ImageIcon icon = new ImageIcon(filename);
