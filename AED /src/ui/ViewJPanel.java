@@ -91,7 +91,8 @@ public class ViewJPanel extends javax.swing.JPanel {
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitle.setText("Create Employee Records");
 
-        lblContactInfo.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        lblContactInfo.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        lblContactInfo.setForeground(new java.awt.Color(153, 0, 51));
         lblContactInfo.setText("Contact Info:");
 
         lblPosTitle.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
@@ -283,7 +284,10 @@ public class ViewJPanel extends javax.swing.JPanel {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lblCellphone, javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(lblEmailAdd, javax.swing.GroupLayout.Alignment.TRAILING))
-                                .addGap(520, 520, 520)))
+                                .addGap(520, 520, 520))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(lblContactInfo)
+                                .addGap(525, 525, 525)))
                         .addComponent(displayImg, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
@@ -296,8 +300,7 @@ public class ViewJPanel extends javax.swing.JPanel {
                     .addComponent(lblName)
                     .addComponent(lblLevel)
                     .addComponent(lblTeamInfo)
-                    .addComponent(lblPosTitle)
-                    .addComponent(lblContactInfo))
+                    .addComponent(lblPosTitle))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -380,9 +383,9 @@ public class ViewJPanel extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblPosTitle)
                             .addComponent(txtPosTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(21, 21, 21)
+                        .addGap(15, 15, 15)
                         .addComponent(lblContactInfo)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(txtCellphone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblCellphone))
@@ -398,7 +401,7 @@ public class ViewJPanel extends javax.swing.JPanel {
                             .addComponent(btnDelete)
                             .addComponent(btnUpdate)))
                     .addComponent(displayImg, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(233, Short.MAX_VALUE))
+                .addContainerGap(227, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
