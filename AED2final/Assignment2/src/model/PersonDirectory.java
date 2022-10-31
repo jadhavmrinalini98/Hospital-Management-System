@@ -35,7 +35,7 @@ public class PersonDirectory {
         
         
         
-        Person person = new Person("Shreyas",Long.parseLong("8422097015"),"email@gmail.com",29,"Male",house,"Shreyas1100");
+        Person person = new Person("Mrinalini",Long.parseLong("8422097015"),"m@gmail.com",24,"Female",house,"mrinalini");
 
         persons.add(person);
     }

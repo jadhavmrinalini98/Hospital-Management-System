@@ -23,15 +23,15 @@ public class DoctorDirectory {
         House house = new House();
         Community community = new Community();
                     
-        house.setHouseNum(75);
-        house.setStreet("St Aphonsus Street");
+        house.setHouseNum(23);
+        house.setStreet("Smith St");
                     
         Map<String,String>communities=new HashMap<>();
         communities.put("Boston","Burlington");
         community.setCommunity(communities);
         house.setCommunity(community);
        
-        Doctor d = new Doctor("Bhawna",Long.parseLong("7678017675"), "bb@g.com",22, "Female", house, 1989, new Date(), DoctorSpecialization.DiagnosticRadiology,1001,"s11");
+        Doctor d = new Doctor("Bhawna",Long.parseLong("7678017675"), "bb@g.com",28, "Female", house, 1989, new Date(), DoctorSpecialization.DiagnosticRadiology,1001,"bhawna");
        
         this.doctors.add(d);
     }

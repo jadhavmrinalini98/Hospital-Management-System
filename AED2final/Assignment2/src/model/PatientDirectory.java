@@ -22,15 +22,15 @@ public class PatientDirectory {
        House house = new House();
        Community community = new Community();
                     
-       house.setHouseNum(75);
-       house.setStreet("Saint Aphonsus Street");
+       house.setHouseNum(48);
+       house.setStreet("St Aphonsus Street");
                     
        Map<String,String>communities=new HashMap<>();
-       communities.put("Boston","Northeastern University");
+       communities.put("Boston","Burlington");
        community.setCommunity(communities);
        house.setCommunity(community);
         
-        Patient patient=new Patient("Tejas",Long.parseLong("8879385690"),"t@g.com",20,"Male",house,2554,Float.parseFloat("6.5"),88,"t11");
+        Patient patient=new Patient("Chinu",Long.parseLong("9869000819"),"c@g.com",20,"Female",house,0001,Float.parseFloat("5.5"),68,"chinu");
         EncounterHistory encounterHistory=new EncounterHistory();
         Encounter encounter=new Encounter();
         

@@ -194,7 +194,7 @@ public class MainJFrame extends javax.swing.JFrame {
             if((username != null && !username.trim().isEmpty()) && (password != null && !password.trim().isEmpty())){
 
                 if(userRole.equals(UserRoles.System_Admin)){
-                    if(username.equals("s") && password.equals("s")){
+                    if(username.equals("admin") && password.equals("admin")){
                         reset();
                         loginStatus = true;
                         SystemJFrame systemFrame = new SystemJFrame(username,personDirectory,doctorDirectory,patientDirectory,hospitalDirectory);
@@ -207,7 +207,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 }
 
                 if(userRole.equals(UserRoles.Community_Admin)){
-                    if(username.equals("c") && password.equals("c")){
+                    if(username.equals("com") && password.equals("com")){
                         reset();
                         loginStatus = true;
                         CommunityJFrame communityFrame = new CommunityJFrame(username);
@@ -220,7 +220,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 }
 
                 if(userRole.equals(UserRoles.Hospital_Admin)){
-                    if(username.equals("h") && password.equals("h")){
+                    if(username.equals("hos") && password.equals("hos")){
                         reset();
                         loginStatus = true;
                         HospitalJFrame hospitalFrame = new HospitalJFrame(username,personDirectory, doctorDirectory, patientDirectory, hospitalDirectory);
@@ -251,29 +251,11 @@ public class MainJFrame extends javax.swing.JFrame {
                 }
                 
 //                
-//                if(userRole.equals(UserRoles.Patient)){
-//                    
-//                    for(Patient patient: patientDirectory.getPatients()){
-//                        
-//                        if(username.equals(String.valueOf(patient.getPatientId())) && password.equals(patient.getPassword())){
-//                        reset();
-//                        loginStatus = true;
-//                        System.out.println(patientDirectory.getPatients().toString()+ " p patient jfraame call");
-//                        PatientJFrame patientFrame = new PatientJFrame(username,personDirectory,patientDirectory,doctorDirectory,hospitalDirectory);
-//                        patientFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
-//                        patientFrame.setVisible(true);
-//                        }
-//                        else{
-//                            loginStatus = false;
-//                        }
-//                        
-//                    }  
-//                }
-                 if(userRole.equals(UserRoles.Patient)){
+                if(userRole.equals(UserRoles.Patient)){
                     
                     for(Patient patient: patientDirectory.getPatients()){
                         
-                        if(username.equals("p") && password.equals("p")){
+                        if(username.equals(String.valueOf(patient.getPatientId())) && password.equals(patient.getPassword())){
                         reset();
                         loginStatus = true;
                         System.out.println(patientDirectory.getPatients().toString()+ " p patient jfraame call");
