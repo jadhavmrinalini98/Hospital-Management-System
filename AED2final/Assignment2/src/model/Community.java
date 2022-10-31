@@ -23,10 +23,10 @@ public class Community{
     }
 
     public void setLstCommunity() {
-        LstCommunity.put(City.NewYork, new String[]{"Brooklyn", "Manhattan", "Queens", "Bronx", });
-        LstCommunity.put(City.Boston, new String[]{"Northeastern University", "Prudential", "Arlington", "Cambridge"});
+        LstCommunity.put(City.NewYork, new String[]{ "Manhattan", "Queens", "Bronx","Brooklyn" });
+        LstCommunity.put(City.Boston, new String[]{"Burlington", "Union Square", "Arlington", "South Sation"});
         LstCommunity.put(City.SouthernCalifornia, new String[]{"Los Angeles", "Santa Barbara", "San Diego"});
-        LstCommunity.put(City.Austin, new String[]{"Downtown", "Caldwell", "Williamson"});
+        LstCommunity.put(City.Austin, new String[]{"Downtown", "Caldwell", "Williamson","Kenney"});
     }
 
     public Map<String, String> getCommunity() {
