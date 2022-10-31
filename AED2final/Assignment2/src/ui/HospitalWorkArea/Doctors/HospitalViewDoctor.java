@@ -133,7 +133,7 @@ public class HospitalViewDoctor extends javax.swing.JPanel {
         // TODO add your handling code here:
         if(txtSearchDoctor.getText().trim().isEmpty()|| txtSearchDoctor.getText()==null)
         {
-            JOptionPane.showMessageDialog(this,"Please Enter a valid Hospital Id");
+            JOptionPane.showMessageDialog(this,"Please Enter a  Hospital Id which is valid");
             return;
         }
         
@@ -171,7 +171,7 @@ public class HospitalViewDoctor extends javax.swing.JPanel {
                     SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy");
                     practisingFromDate = simpleDateFormat.format(doctor.getPracticingFrom());
                 } catch (Exception ex) {
-                    System.out.println("Date is null");
+                    System.out.println("Date not entered");
                 }
                     
                 model.addRow(new Object[]
@@ -214,7 +214,7 @@ public class HospitalViewDoctor extends javax.swing.JPanel {
                         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy");
                         practisingFromDate = simpleDateFormat.format(doctor.getPracticingFrom());
                     } catch (Exception ex) {
-                        System.out.println("Date is null");
+                        System.out.println("Date is not entered properly");
                     }
 
                     model.addRow(new Object[]
