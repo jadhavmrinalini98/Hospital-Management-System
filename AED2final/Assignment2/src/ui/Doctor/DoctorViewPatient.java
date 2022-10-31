@@ -189,7 +189,7 @@ public class DoctorViewPatient extends javax.swing.JPanel {
     private void populateDataByPatientId() {
         try{
             var x = patientDirectory.getPatients();
-            DefaultTableModel model = new DefaultTableModel(new Object[]{ "Patient Id", "Patient Name", "Contact Number", "Age","Height","Weight","Email", "Contact", "Address", "City", "Community"}, 0);
+            DefaultTableModel model = new DefaultTableModel(new Object[]{ "Patient Id", "Patient Name", "Contact No", "Age","Height","Weight","Email Id", "Contact", "Address", "City", "Community"}, 0);
             if(x!=null && !x.isEmpty())
             {
                 x.forEach(patient -> {
