@@ -8,10 +8,11 @@ The Patient and doctor are entities which have limited access rights.
 
 The person directory, Hospital directory, Patient Directory , doctor directory consists of the list of respective entities. 
 
-The following is the Class Daigram for the given System
+The following is the Sequence daigram for the given System
 
 ![WhatsApp Image 2022-10-31 at 1 29 29 PM (1)](https://user-images.githubusercontent.com/114711523/199130415-7aaba24d-b8fd-45a5-8576-e93540b43c5f.jpeg)
 
+The following is the Class daigram for the given System
 
 
 
