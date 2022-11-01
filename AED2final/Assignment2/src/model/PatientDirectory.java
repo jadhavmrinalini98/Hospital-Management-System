@@ -29,7 +29,7 @@ public class PatientDirectory {
        communities.put("Boston","Burlington");
        community.setCommunity(communities);
        house.setCommunity(community);
-        
+        //hard coded values of patient
         Patient patient=new Patient("Chinu",Long.parseLong("9869000819"),"c@g.com",20,"Female",house,0001,Float.parseFloat("5.5"),68,"chinu");
         EncounterHistory encounterHistory=new EncounterHistory();
         Encounter encounter=new Encounter();
