@@ -23,7 +23,7 @@ public class PatientDirectory {
        Community community = new Community();
                     
        house.setHouseNum(48);
-       house.setStreet("St Aphonsus Street");
+       house.setStreet("St Alphonsus Street");
                     
        Map<String,String>communities=new HashMap<>();
        communities.put("Boston","Burlington");
