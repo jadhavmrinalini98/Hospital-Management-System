@@ -4,8 +4,10 @@
  */
 package ui.Community;
 
+import java.util.ArrayList;
 import java.util.Map;
 import java.util.Set;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import model.City;
@@ -187,4 +189,22 @@ public class ViewCommunity extends javax.swing.JPanel {
     private void populateData() {
         DefaultTableModel model = new DefaultTableModel(new Object[]{ "Hospital Id"},0);
     }
+//    public void generateDropdown() {
+//        ArrayList<String> cityDropdown = new ArrayList<>();
+//        for (String cityValue : City.cityValues) {
+//            cityDropdown.add(String.valueOf(cityValue));
+//        }
+//        String[] citySDropdown = cityDropdown.toArray(new String[cityDropdown.size()]);
+//        DefaultComboBoxModel<String> yearsSDropdownModel = new DefaultComboBoxModel<>(citySDropdown);
+//        cityJComboBox.setModel(yearsSDropdownModel);
+//    }
+
+//    public void updateTable() {
+//         DefaultTableModel model = new DefaultTableModel(new Object[]{ "Hospital Id"},0);
+//        model.setRowCount(0);
+//        for (int i = 0; i < City.allCities.size(); i++) {
+//            Object[] row = {Community.};
+//            model.addRow(row);
+//        }
+//    }
 }

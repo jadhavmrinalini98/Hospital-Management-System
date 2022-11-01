@@ -41,9 +41,9 @@ public class PatientDirectory {
         vitalSign_1.setDateOfVitals(new Date());
         
         VitalSigns vitalSigns_2=new VitalSigns();
-        vitalSigns_2.setBloodPressure(130);
-        vitalSigns_2.setPulse(80);
-        vitalSigns_2.setTemperature(105);
+        vitalSigns_2.setBloodPressure(120);
+        vitalSigns_2.setPulse(85);
+        vitalSigns_2.setTemperature(100);
         vitalSigns_2.setDateOfVitals(new Date());  
         
         Map<Date,VitalSigns> EncounterMap=new HashMap<>();
@@ -59,7 +59,7 @@ public class PatientDirectory {
         
         encounterHistory.setPatientEncounterHistory(encounter);
         Map<Integer,EncounterHistory> encounterHistoryMapping =new HashMap<>();
-        encounterHistoryMapping.put(2554, encounterHistory);
+        encounterHistoryMapping.put(2514, encounterHistory);
 //       patient.setEncounterHistory(encounterHistory);
         patient.setPatientHistoryMap(encounterHistoryMapping);
         patients.add(patient);
